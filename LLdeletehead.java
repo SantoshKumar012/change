@@ -2,7 +2,7 @@ import java.util.*;
 
 class ListNode {
     int val;
-    ListNode next;
+    Deletetail next;
 
     ListNode() {
         val = 0;
@@ -14,17 +14,17 @@ class ListNode {
         next = null;
     }
 
-    ListNode(int data1, ListNode next1) {
+    ListNode(int data1, Deletetail next1) {
         val = data1;
         next = next1;
     }
 }
 
 class LLdeletehead {
-    public ListNode deleteHead(ListNode head) {
+    public Deletetail deleteHead(Deletetail head) {
         if (head == null) 
             return null;
-            ListNode temp = head;
+            Deletetail temp = head;
             head = head.next;
             temp = null;        
             return head;
@@ -32,16 +32,16 @@ class LLdeletehead {
 }
 
 class Main {
-    private static void printList(ListNode head) {
-        ListNode current = head;
+    private static void printList(Deletetail head) {
+        Deletetail current = head;
         while (current != null) {
             System.out.print(current.val + " ");
             current = current.next;
         }
         System.out.println();
     }
-    public static ListNode insertAtHead(ListNode head, int data) {
-        ListNode newNode = new ListNode(data);
+    public static Deletetail insertAtHead(Deletetail head, int data) {
+        Deletetail newNode = new Deletetail(data);
         newNode.next = head;
         head = newNode;
         return head;
@@ -49,7 +49,7 @@ class Main {
     
     
     public static void main(String[] args) {
-        ListNode head = null;
+        Deletetail head = null;
         head = insertAtHead(head, 3);
         head = insertAtHead(head, 2);
         head = insertAtHead(head, 1);
